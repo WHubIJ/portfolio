@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #0A0A0F;
+    --color-surface: #111118;
+    --color-primary: #6C63FF;
+    --color-accent: #00D4A4;
+    --color-text: #F0EFF8;
+    --color-text-muted: #8888AA;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-text font-body;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(108, 99, 255, 0.3);
+    color: #F0EFF8;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A38;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6C63FF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #6C63FF 0%, #00D4A4 100%);
+  }
+
+  .card-base {
+    @apply bg-surface-2 border border-border rounded-2xl;
+  }
+
+  .tag {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono
+           bg-surface-3 border border-border text-text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+           bg-primary text-white font-display font-semibold text-sm
+           hover:bg-primary-dim transition-all duration-200
+           hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+           border border-border text-text-muted font-display font-semibold text-sm
+           hover:border-primary hover:text-text transition-all duration-200
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest
+           text-primary mb-4;
+  }
+
+  .grid-dot-bg {
+    background-image: radial-gradient(circle, #2A2A38 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
