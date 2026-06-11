@@ -1,20 +1,12 @@
-import { useState, type FormEvent } from 'react'
+
 import { motion } from 'framer-motion'
-import { HiMail, HiUser, HiChat, HiPaperAirplane } from 'react-icons/hi'
+import { HiMail } from 'react-icons/hi'
 import { SiGithub } from 'react-icons/si'
 import { FaLinkedin } from 'react-icons/fa'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { SOCIAL_LINKS } from '@/lib/data'
 
-interface FormState {
-  name: string
-  email: string
-  subject: string
-  message: string
-}
-
-const INITIAL_FORM: FormState = { name: '', email: '', subject: '', message: '' }
 
 const CONTACT_LINKS = [
   {
@@ -41,18 +33,6 @@ const CONTACT_LINKS = [
 ]
 
 export default function ContactPage() {
-  const [form, setForm] = useState<FormState>(INITIAL_FORM)
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault()
-    setStatus('sending')
-    // Simulate sending — integrate with your preferred service (Formspree, EmailJS, etc.)
-    await new Promise((r) => setTimeout(r, 1400))
-    setStatus('sent')
-    setForm(INITIAL_FORM)
-  }
-
   return (
     <div className="pt-24 section-padding">
       <div className="section-container max-w-5xl">

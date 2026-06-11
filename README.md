@@ -1,17 +1,39 @@
-# Wisdom Isibor — Portfolio
+# Wisdom Imade Isibor | Full Stack Developer Portfolio
 
-Personal portfolio website for Wisdom Imade Isibor, Full Stack Developer.
+Professional portfolio website for Wisdom Imade Isibor, a Full Stack Developer focused on building modern, responsive, and maintainable web applications.
 
-**Stack:** React 19 · TypeScript · Vite · Tailwind CSS · Framer Motion
+The site presents selected projects, professional experience, technical skills, and contact information in a clean portfolio format suitable for recruiters, collaborators, and hiring teams.
 
----
+## Overview
+
+This portfolio is built as a fast, type-safe, single-page React application with dedicated routes for home, projects, experience, and contact. It highlights practical full stack experience across frontend development, backend APIs, databases, cloud services, and production-oriented workflows.
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
+- React Icons
+
+## Features
+
+- Responsive portfolio layout for desktop and mobile
+- Animated page sections using Framer Motion
+- Dedicated project pages with technologies, features, challenges, and learnings
+- Experience section focused on real-world full stack work
+- Contact page with email, LinkedIn, GitHub, and availability status
+- Centralized content configuration in `src/lib/data.ts`
+- Production-ready Vite build setup
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- Node.js 18 or later
+- npm
 
 ### Installation
 
@@ -25,130 +47,101 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:5173`
+The development server runs at:
 
-### Build
+```text
+http://localhost:5173
+```
+
+### Production Build
 
 ```bash
 npm run build
 ```
 
-### Preview production build
+### Preview Build
 
 ```bash
 npm run preview
 ```
 
----
+## Available Scripts
 
-## Customization
-
-### 1. Update personal information
-
-Edit `src/lib/data.ts`:
-- Replace `YOUR_GITHUB_USERNAME` with your GitHub username
-- Replace `wisdomimade14@gmail.com` with your email
-- The LinkedIn URL is already set
-
-### 2. Update CV
-
-Replace `public/cv.pdf` with your actual CV file.
-
-### 3. Update OG image
-
-Replace `public/og-image.png` with a 1200×630 Open Graph image.
-
----
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push to GitHub
-2. Go to [vercel.com](https://vercel.com) → New Project → Import repo
-3. Vercel auto-detects Vite — click **Deploy**
-4. (Optional) Add custom domain in Project Settings
-
-No additional configuration needed.
-
-### GitHub Pages
-
-1. Install the deployment package:
-   ```bash
-   npm install --save-dev gh-pages
-   ```
-
-2. Add to `package.json` scripts:
-   ```json
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
-   ```
-
-3. Set `base` in `vite.config.ts`:
-   ```ts
-   base: '/your-repo-name/'
-   ```
-
-4. Deploy:
-   ```bash
-   npm run deploy
-   ```
-
-5. In GitHub repo Settings → Pages → Source → `gh-pages` branch
-
-**Note:** For React Router to work on GitHub Pages, add a `404.html` redirect. See [spa-github-pages](https://github.com/rafgraph/spa-github-pages) for the workaround.
-
----
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
 
 ## Project Structure
 
-```
+```text
 src/
 ├── components/
-│   ├── layout/         # Navbar, Footer, Layout
-│   ├── sections/       # Hero, About, Skills, GitHub sections
-│   └── ui/             # ProjectCard, SectionHeader, LoadingSpinner
+│   ├── layout/       # Navbar, Footer, Layout
+│   ├── sections/     # Home page sections
+│   └── ui/           # Reusable UI components
 ├── features/
-│   ├── home/           # HomePage
-│   ├── projects/       # ProjectsPage
-│   ├── experience/     # ExperiencePage
-│   ├── contact/        # ContactPage
-│   └── NotFoundPage    # 404
-├── hooks/              # useScrollReveal
-├── lib/
-│   ├── animations.ts   # Framer Motion variants
-│   └── data.ts         # All content data
-├── types/              # TypeScript interfaces
-├── App.tsx             # Router
-├── main.tsx            # Entry point
-└── index.css           # Global styles + Tailwind
+│   ├── contact/      # Contact page
+│   ├── experience/   # Experience page
+│   ├── home/         # Home page
+│   └── projects/     # Projects page
+├── hooks/            # Custom React hooks
+├── lib/              # Animations and portfolio data
+├── types/            # TypeScript interfaces
+├── App.tsx           # Application routes
+├── main.tsx          # React entry point
+└── index.css         # Global styles
 ```
 
----
+## Content Management
 
-## Contact Form
+Most portfolio content is managed from:
 
-The contact form is UI-only by default. To activate:
+```text
+src/lib/data.ts
+```
 
-- **Formspree:** Add `action="https://formspree.io/f/YOUR_ID"` to the form, switch from the simulated submit to a real `fetch`.
-- **EmailJS:** Integrate `emailjs-com` in the `handleSubmit` function.
-- **Custom backend:** POST to your own API endpoint.
+Use this file to update:
 
----
+- Navigation links
+- Social links
+- Skills
+- Experience
+- Projects
 
-## SEO
+Static assets such as the CV and Open Graph image are stored in:
 
-Update `index.html`:
-- Replace `https://wisdomisibor.dev/` with your actual URL
-- Update OG and Twitter card meta tags once you have a deployed URL
+```text
+public/
+```
 
----
+## Deployment
 
-## Lighthouse
+This project can be deployed to any static hosting platform that supports Vite builds.
 
-Target: 90+ across all categories.
+Recommended options:
 
-Tips for max score:
-- Serve the OG image in WebP format
-- Ensure fonts are `display=swap` (already configured)
-- Enable Vercel Edge Network for asset caching
+- Vercel
+- Netlify
+- GitHub Pages
+
+Typical production command:
+
+```bash
+npm run build
+```
+
+Build output:
+
+```text
+dist/
+```
+
+## Contact
+
+- Email: wisdomimade14@gmail.com
+- GitHub: https://github.com/WHubIJ
+- LinkedIn: https://www.linkedin.com/in/wisdom-imade-a0b0bb36b
+
