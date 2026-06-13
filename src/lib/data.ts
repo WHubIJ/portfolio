@@ -212,7 +212,7 @@ export const PROJECTS: Project[] = [
       'Designing a flexible domain model capable of handling hierarchical organizational structures while enforcing role-based permissions and maintaining data consistency across multiple branches and administrative levels.',
     learnings:
       'Deep understanding of Java and Spring Boot frameworks, database design with PostgreSQL, and implementing secure role-based authentication and authorization.',
-    githubUrl: 'https://github.com/WHubIJ/EnterpriseSaas.git',
+    githubUrl: '#',
     isBuilding: true,
     isEnterprise: true,
     imagePlaceholder: '#2e687d',
