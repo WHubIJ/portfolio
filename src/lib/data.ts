@@ -191,4 +191,28 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/WHubIJ/Spotify.git',
     imagePlaceholder: '#1DB954',
   },
+  {
+    id: 'enterprise-management-system',
+    title: 'Enterprise Management System',
+    description: 'An internal enterprise application for managing employees, projects, and resources.',
+    longDescription:
+      'Enterprise Management System is a comprehensive administration platform designed to manage organizations with multiple branches and hierarchical structures. The application centralizes branch management, user roles, document handling, inventory tracking, and financial operations through a secure role-based access system.',
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Spring Security'],
+    features: [
+      'Hierarchical organization structure management',
+    'Role-based access control (Administrator, Manager, Staff)',
+    'Branch lifecycle management and status tracking',
+    'Document upload and administration',
+    'Inventory management system',
+    'Financial records and reporting',
+    'Secure JWT authentication and authorization',
+    'RESTful API architecture',
+    ],
+    challenges:
+      'Designing a flexible domain model capable of handling hierarchical organizational structures while enforcing role-based permissions and maintaining data consistency across multiple branches and administrative levels.',
+    learnings:
+      'Deep understanding of Java and Spring Boot frameworks, database design with PostgreSQL, and implementing secure role-based authentication and authorization.',
+    githubUrl: 'https://github.com/WHubIJ/EnterpriseSaas.git',
+    imagePlaceholder: '#2e687d',
+  },
 ]
