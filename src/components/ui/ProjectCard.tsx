@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SiGithub } from 'react-icons/si'
-import { HiExternalLink, HiChevronDown, HiLockClosed } from 'react-icons/hi'
+import { HiExternalLink, HiChevronDown, HiLockClosed, HiCode } from 'react-icons/hi'
 import type { Project } from '@/types'
 import { scaleIn } from '@/lib/animations'
 
@@ -35,12 +35,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {project.title.charAt(0)}
           </span>
         </div>
-        {project.isEnterprise && (
-          <div className="absolute top-3 left-3">
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono bg-background/80 backdrop-blur border border-border text-text-muted">
-              <HiLockClosed size={10} />
-              Enterprise
-            </span>
+        {(project.isEnterprise || project.isBuilding) && (
+          <div className="absolute top-3 left-3 flex flex-col items-start gap-2">
+            {project.isEnterprise && (
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono bg-background/80 backdrop-blur border border-border text-text-muted">
+                <HiLockClosed size={10} />
+                Enterprise
+              </span>
+            )}
+            {project.isBuilding && (
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono bg-primary/10 backdrop-blur border border-primary/30 text-primary">
+                <HiCode size={10} />
+                Building
+              </span>
+            )}
           </div>
         )}
       </div>

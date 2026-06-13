@@ -10,6 +10,7 @@ export interface Project {
   githubUrl: string
   liveUrl?: string
   isEnterprise?: boolean
+  isBuilding?: boolean
   imagePlaceholder: string
 }
 
