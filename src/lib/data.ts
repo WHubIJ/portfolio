@@ -214,6 +214,7 @@ export const PROJECTS: Project[] = [
       'Deep understanding of Java and Spring Boot frameworks, database design with PostgreSQL, and implementing secure role-based authentication and authorization.',
     githubUrl: 'https://github.com/WHubIJ/EnterpriseSaas.git',
     isBuilding: true,
+    isEnterprise: true,
     imagePlaceholder: '#2e687d',
   },
 ]
