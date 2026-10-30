@@ -192,32 +192,6 @@ export const PROJECTS: Project[] = [
     imagePlaceholder: '#1DB954',
   },
   {
-    id: 'ipue-management',
-    title: 'IPUE Management System',
-    description: 'REST API for managing churches, users and members with role-based access control.',
-    longDescription:
-      'A production-ready Church Management REST API built as a complete 3-phase MVP. It handles full CRUD operations for churches, users and members, including inter-church member transfer logic and role-based access control for ADMIN and PASTOR roles, backed by a clean 4-layer architecture.',
-    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Spring Security', 'Docker'],
-    features: [
-      'Clean 4-layer architecture (Entity → Repository → Service → Controller)',
-      'Session-based authentication with Spring Security and BCrypt hashing',
-      'Full CRUD for churches, users and members',
-      'Inter-church member transfer logic',
-      'Soft-delete pattern with no hard deletes',
-      'Centralized error handling with a typed ErrorCode enum',
-      'Interactive API docs via Swagger UI',
-      'One-command deployment with Docker Compose',
-      '25 passing unit and integration tests',
-    ],
-    challenges:
-      'Designing member-transfer logic that preserves data integrity across churches (marking the original record as transferred while creating a new one) alongside granular, role-based access control.',
-    learnings:
-      'Clean architecture practices in Spring Boot, test-driven development with JUnit and Mockito, and reproducible deployment with Docker Compose.',
-    githubUrl: 'https://github.com/WHubIJ/organization-management.git',
-    isBuilding: false,
-    imagePlaceholder: '#8B5CF6',
-  },
-  {
     id: 'meetingai',
     title: 'MeetingAI',
     description: 'Mobile app that records, transcribes and summarizes board meetings into shareable minutes.',
